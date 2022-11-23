@@ -53,7 +53,7 @@ function App() {
         return;
       }
 
-      setDevice((_) => devices[0]);
+      setDevice(_ => devices[0]);
     } catch (e) {
       console.error(`Failed to connect device: ${e}`);
       return;
@@ -62,13 +62,18 @@ function App() {
 
   const disconnectDevice = async () => {
     await device!.close();
+    setDevice(_ => null);
   };
 
   return (
     <div className="App">
       <h1>Patlite WebUSB Demo</h1>
-      <input className="button" type="button" id="connectButton" value="Connect" onClick={connectDevice} />
-      <input className="button" type="button" id="disconnectButton" value="Disconnect" onClick={disconnectDevice} />
+      {
+        device === null ?
+          <input className="button" type="button" id="connectButton" value="Connect" onClick={connectDevice} />
+          :
+          <input className="button" type="button" id="disconnectButton" value="Disconnect" onClick={disconnectDevice} />
+      }
 
       <Wrapper device={device}></Wrapper>
     </div>

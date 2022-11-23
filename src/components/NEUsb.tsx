@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import "./Common.css";
 
 function alarmPatternToValue(pattern: string): number {
   switch (pattern) {
@@ -180,9 +181,8 @@ export const NEUsb: React.FC<Props> = ({ device }) => {
       </select>
 
       <h3>Send Command</h3>
-      <input className="button" type="button" id="sendButton" value="Send" onClick={sendCommand} />
-      <h3>Clear</h3>
-      <input className="button" type="button" id="clearButton" value="Clear" onClick={sendReset} />
+      <input className="button" type="button" value="Send" onClick={sendCommand} />
+      <input className="button" type="button" value="Reset" onClick={sendReset} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import "./Common.css";
 
 function buzzerPatternToValue(pattern: string): number {
   switch (pattern) {
@@ -230,8 +231,8 @@ export const LR6Usb: React.FC<Prop> = ({ device }) => {
       </select>
 
       <h3>Send Command</h3>
-      <input className="button" type="button" id="sendButton" value="Send" onClick={sendCommand} />
-      <input className="button" type="button" id="clearButton" value="Clear" onClick={sendReset} />
+      <input className="button" type="button" value="Send" onClick={sendCommand} />
+      <input className="button" type="button" value="Clear" onClick={sendReset} />
     </>
   );
 };
