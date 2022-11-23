@@ -17,7 +17,7 @@ https://syohex.github.io/WebHID-Patlite-Demo/
 - macOS Chrome
 - Linux Chrome
 
-## For Linux user
+## For Linux users
 
 Add following udev rules(e.g. `/etc/udev/rules.d/90-patlite.rules`)
 
