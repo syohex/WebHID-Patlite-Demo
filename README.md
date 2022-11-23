@@ -2,6 +2,8 @@
 
 Use Patlite USB devices on web browser
 
+![image](./images/image.jpg)
+
 ## Demo Page
 
 https://syohex.github.io/WebHID-Patlite-Demo/
@@ -17,9 +19,11 @@ https://syohex.github.io/WebHID-Patlite-Demo/
 - macOS Chrome
 - Linux Chrome
 
-## For Linux user
+The browser must support [WebHID](https://wicg.github.io/webhid/).
 
-Add following udev rules(e.g. `/etc/udev/rules.d/90-patlite.rules`)
+## For Linux users
+
+Add following udev rules(e.g. `/etc/udev/rules.d/90-patlite.rules`) to use USB devices without root permission.
 
 ```
 # NE-USB
@@ -33,3 +37,12 @@ And then reload the rule by the following command
 ```
 % sudo udevadm control --reload-rules
 ```
+
+## How to use
+
+1. Connect a device to PC
+1. Open https://syohex.github.io/WebHID-Patlite-Demo/ in a web browser
+1. Click connect button
+1. Choose the device
+1. Adjust parameters
+1. Click send button
